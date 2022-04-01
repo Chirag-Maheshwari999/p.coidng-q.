@@ -1,0 +1,32 @@
+Two Strings are said to be balanced if all the characters present in the first string are also present in the second string.Position of characters does not matter. Write a code which takes two strings as input and prints True if they are balanced, and False otherwise.
+Input format:
+The first line of input contains a string without any leading and trailing spaces, representing the first string 'str1'
+
+The second line of input contains a string without any leading and trailing spaces, representing the second string 'str2'.
+Output Format:
+ The only line of output prints either 'True' or 'False', denoting whether the two strings are balanced or not.
+Sample Input 1
+set
+speciality
+Sample Output 1
+True
+Sample Input 2
+help
+helmet
+Sample Output 2
+False
+
+def balancedstrings(string1, string2):
+    for i in string1:
+        if i in string2:
+            continue
+        else:
+            return "False"
+    return "True"
+  
+
+
+
+str1 = input().strip()
+str2 = input().strip()
+print(balancedstrings(str1, str2))
