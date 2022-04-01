@@ -1,0 +1,24 @@
+Count the frequency of each character of an input string and return the output as list containing tuples of each individual character as key and frequency as value. Ignoring spaces. Also the string is printed in sorted order like if the string is “hello” then print first the occurrence of character as e,h,l and o as e comes first on sorting alphabets.
+Input Format:
+String with or without spaces
+Output Format:
+Nested Structure
+Sample Input 1:
+Chitkara University
+Sample Output 1:
+[('C', 1), ('U', 1), ('a', 2), ('e', 1), ('h', 1), ('i', 3), ('k', 1), ('n', 1), ('r', 2), ('s', 1), ('t', 2), ('v', 1), ('y', 1)]
+
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
+#Write your code here
+val = input().replace(" "," ")
+s = sorted(list(set(val)))
+a = []
+for i in s:
+    a.append((i ,val.count(i)))
+print(a)
+
