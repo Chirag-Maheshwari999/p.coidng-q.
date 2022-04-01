@@ -1,0 +1,20 @@
+Numbers and Squares
+Send Feedback
+Write a program to create a dictionary of numbers and their squares (i, i*i) from 1 to N.
+Input Format:
+The only line of input contains an integer N .
+Output Format:
+Print the dictionary containing numbers and their squares.
+Sample Input:
+5
+Sample Output:
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+
+## Write your code here
+d={}
+n=int(input())
+
+for i in range(1,n+1):
+    d[i]=i*i
+print(d)
