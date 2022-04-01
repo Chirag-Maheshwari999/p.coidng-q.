@@ -1,0 +1,41 @@
+Riya wants to park her car in the 1 st freely available slot in the mall's parking lot (if it is available) or in the ground adjacent to the mall. There are 4 basements:- B1, B2, B3 and B4. Assume that only when B1 is full, cars would be allowed to be parked in B2 and so on. The number of cars that can be parked in the basements B1, B2, B3 and B4 are N1, N2, N3 and N4. The total number of cars parked in the parking lot currently is N.
+[Assume that no other car is in queue to get parked and no other car leaves at this time].
+Input Format:
+Input consists of 5 integers corresponding to N1, N2, N3, N4 and N.
+Output Format:
+Output consists of a string which is either 'B1' or 'B2' or 'B3' or 'B4' or 'EXT'. EXT corresponds to external parking in the adjacent ground.
+Sample Input 1:
+50  
+50  
+40  
+40  
+120  
+Sample Output 1:
+B3   
+
+
+
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
+#Write your code here
+B1 = int(input())
+B2 = int(input())
+B3 = int(input())
+B4 = int(input())
+a = [B1,B2,B3,B4]
+b = ["B1","B2","B3","B4"]
+N = int(input())
+flag =0
+sum =0
+for i in range(4):
+    sum = sum + a[i]
+    if(N<=sum):
+        print(b[i])
+        flag = 1
+        break
+if(flag==0):
+    print("EXT")
