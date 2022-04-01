@@ -1,0 +1,28 @@
+Write a procedure that evaluates polynomials. It should take two arguments. The first is a number x. The second is a list of of coefficients ordered from highest to lowest:
+No image available
+Your procedure should return the value of the polynomial evaluated at x:
+No image available
+Sample input 1:
+1  
+1 2 3  
+Sample output 1:
+6  
+
+
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
+#Write your code here
+x=int (input ( ))
+poly=list (map (int, input () .split()))
+n=len(poly)
+result = 0
+for i in range(n):
+    Sum = poly[i]
+    for j in range(n - i - 1):
+        Sum = Sum * x
+    result = result + Sum
+print(result)
